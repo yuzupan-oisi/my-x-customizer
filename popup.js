@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const showRetweetsCheckbox = document.getElementById('showRetweets');
+  const hideRepostsOnProfileCheckbox = document.getElementById('showRetweets'); // ID remains the same for now
 
   // 保存された設定を読み込み、チェックボックスに反映
-  chrome.storage.local.get({ showRetweets: true }, (data) => {
-    showRetweetsCheckbox.checked = data.showRetweets;
+  chrome.storage.local.get({ hideRepostsOnProfile: false }, (data) => {
+    hideRepostsOnProfileCheckbox.checked = data.hideRepostsOnProfile;
   });
 
   // チェックボックスの変更を監視し、設定を保存
-  showRetweetsCheckbox.addEventListener('change', (event) => {
-    chrome.storage.local.set({ showRetweets: event.target.checked });
+  hideRepostsOnProfileCheckbox.addEventListener('change', (event) => {
+    chrome.storage.local.set({ hideRepostsOnProfile: event.target.checked });
   });
 });
