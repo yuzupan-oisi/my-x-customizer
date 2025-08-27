@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Twitter Customizer",
+  "name": "My X Customizer",
   "version": "0.1.0",
   "description": "Twitterの表示をカスタマイズする拡張機能です。",
   "permissions": [
